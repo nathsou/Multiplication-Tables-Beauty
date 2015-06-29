@@ -8,7 +8,7 @@ Inspired by micmaths's video about multiplication tables's hidden beauty
 
 
 ##Where it comes from
-[![Micmaths is a great math related channel !](http://img.youtube.com/vi/-X49VQgi86E/0.jpg)](https://www.youtube.com/watch?v=-X49VQgi86E)
+[![Micmaths is a great math related channel !](http://nathsou.fr/iup/u/a34e-Capture_d’écran_2015-06-29_à_09.22.19.png)](https://www.youtube.com/watch?v=-X49VQgi86E)
 
 
 ##Some interesting parameters
