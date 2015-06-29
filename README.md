@@ -13,7 +13,7 @@ Inspired by micmaths's video about multiplication tables's hidden beauty
 
 ##Some interesting parameters
 
-![Rosace](http://nathsou.fr/iup/u/2a06-canvas0.png)
+![Yarn Ball](http://nathsou.fr/iup/u/2a06-canvas0.png)
 
 ![Flowers](http://nathsou.fr/iup/u/fb19-canvas.png)
 
