@@ -16,6 +16,22 @@ var settings = {
   linesColor: 'black'
 };
 
+//Url Parameters : site.com/?t=2&m=130
+var urlParams = window.location.search;
+if(urlParams != ""){
+  var tParam = urlParams.split("t=")[1].split("&")[0];
+  urlParams.replace(tParam, "");
+  if(!isNaN(parseFloat(tParam)) && isFinite(tParam)){
+    settings.multTable = Math.abs(tParam);
+  }
+    if(urlParams.includes("m=")){
+      var mParam = urlParams.split("m=")[1].split("&")[0];
+      if(!isNaN(parseFloat(mParam)) && isFinite(mParam)){
+        settings.modulus = Math.abs(mParam);
+      }
+    }
+  }
+
  function pointPos(nth, r) {
 
     var d = (Math.PI * 2) / settings.modulus;
