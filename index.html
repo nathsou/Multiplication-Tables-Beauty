@@ -105,8 +105,10 @@ function takeScreenshot(canvas, filename) {
  
 </script>
 
-<button onClick="takeScreenshot(canvas, 'canvas.png')">Take a screenshot</button>
-<input type = "range" min = "0" max "500" placeholder = "table" id = "table" onchange="settings.multTable = this.value; update();"></input>
-<input type = "range" min = "0" max = "500" placeholder = "modulus" id = "modulus" onchange="settings.modulus = this.value; update();"></input>
-
+<button onClick = "takeScreenshot(canvas, 'canvas.png')">Take a screenshot</button>
+<button onClick = "settings.animate = !settings.animate">Play / Pause</button>
+<label for=table>table</label>
+<input type = "number" min = "0" max "10000" value = "2" step = "1" placeholder = "table" id = "table" onchange="settings.multTable = this.value; update();"></input>
+<label for=modulus>modulus</label>
+<input type = "number" min = "0" max = "10000" value = "130" step = "1" placeholder = "modulus" id = "modulus" onchange="settings.modulus = this.value; update();"></input>
 </html>
