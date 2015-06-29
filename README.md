@@ -19,7 +19,7 @@ Inspired by micmaths's video about multiplication tables's hidden beauty
 
 [![Parallel lines!](http://nathsou.fr/iup/u/d99a-canvas2.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=41&m=42)
 
-[![Polygons!](http://nathsou.fr/iup/u/9822-canvas3.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=41&m=32)
+[![Rotated squares!](http://nathsou.fr/iup/u/9822-canvas3.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=41&m=32)
 
 [![Grid!](http://nathsou.fr/iup/u/ffe3-canvas4.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=89&m=180)
 
