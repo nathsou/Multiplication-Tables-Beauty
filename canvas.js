@@ -13,8 +13,7 @@ var settings = {
   speed: 0.01,
   animate: true,
   bgColor: '#ecf0f1',
-  linesColor: '#34495e',
-  spaceBarPressed: false
+  linesColor: '#34495e'
 };
 
  function pointPos(nth, r) {
@@ -28,15 +27,10 @@ var settings = {
     return v;
 }
 
-  var k = false;
-
 window.addEventListener('keydown', function(e) {
 
   if (e.keyCode == 32) { //Space bar
-        if(!settings.spaceBarPressed){
         settings.animate = !settings.animate;
-      }
-      settings.spaceBarPressed = true;
     }
 
   if (e.keyCode == 37) { //Left arrow key
@@ -52,8 +46,6 @@ window.addEventListener('keydown', function(e) {
 
 
 function update(){
-
-  console.log(settings.modulo);
 
   if(settings.animate){
     settings.modulo += settings.speed;
