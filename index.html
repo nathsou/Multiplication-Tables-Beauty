@@ -10,28 +10,29 @@
 
 </body>
 
-<script type = "text/javascript">
+<script>
+ 
  var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = 0.9 * window.innerWidth;
+canvas.height = 0.9 * window.innerHeight;
 
 var settings = {
   radius: canvas.width/4,
   x: canvas.width/2,
   y: canvas.height/2,
-  modulo: 130,
+  modulus: 130,
   multTable: 2,
   speed: 0.01,
-  animate: true,
-  bgColor: '#ecf0f1',
-  linesColor: '#34495e'
+  animate: false,
+  bgColor: 'white',
+  linesColor: 'black'
 };
 
  function pointPos(nth, r) {
 
-    var d = (Math.PI * 2) / settings.modulo;
+    var d = (Math.PI * 2) / settings.modulus;
     var v = {
       x: settings.x + (Math.cos((nth * d) - Math.PI/2) * r),
       y: settings.y + (Math.sin((nth * d) - Math.PI/2) * r)
@@ -45,23 +46,12 @@ window.addEventListener('keydown', function(e) {
   if (e.keyCode == 32) { //Space bar
         settings.animate = !settings.animate;
     }
-
-  if (e.keyCode == 37) { //Left arrow key
-    settings.modulo -= settings.speed;
-    settings.multTable -= settings.speed;
-  }
-  if (e.keyCode == 39) { //Right arrow key
-    settings.modulo += settings.speed;
-    settings.multTable += settings.speed;
-  }
-
   });
 
 
 function update(){
-
   if(settings.animate){
-    settings.modulo += settings.speed;
+    settings.modulus += settings.speed;
     settings.multTable += settings.speed;
   }
 
@@ -78,13 +68,15 @@ ctx.fill();
 ctx.arc(settings.x, settings.y, settings.radius, 0, Math.PI*2);
 ctx.strokeStyle = settings.linesColor;
 
-  for(var i = 0; i < settings.modulo; i++){
+  for(var i = 0; i < settings.modulus; i++){
     var v = pointPos(i, settings.radius);
     ctx.moveTo(v.x, v.y);
     v = pointPos(i * settings.multTable, settings.radius);
     ctx.lineTo(v.x, v.y);
   }
-
+  ctx.font = "15px Arial";
+  ctx.fillStyle = settings.linesColor;
+  ctx.fillText("Table of " + Math.round(settings.multTable * 100)/100 + " modulus " + Math.round(settings.modulus * 100)/100, 10, canvas.height - 10);
   ctx.stroke();
   ctx.closePath();
 
@@ -92,9 +84,29 @@ ctx.strokeStyle = settings.linesColor;
 
 update();
 
+function takeScreenshot(canvas, filename) {
+  var lnk = document.createElement('a'),
+      e;
+  lnk.download = filename;
+
+  lnk.href = canvas.toDataURL("image/png;base64");
+  if (document.createEvent) {
+    e = document.createEvent("MouseEvents");
+    e.initMouseEvent("click", true, true, window,
+                     0, 0, 0, 0, 0, false, false, false,
+                     false, 0, null);
+
+    lnk.dispatchEvent(e);
+  } else if (lnk.fireEvent) {
+    lnk.fireEvent("onclick");
+  }
+}
 
  
 </script>
 
+<button onClick="takeScreenshot(canvas, 'canvas.png')">Take a screenshot</button>
+<input type = "range" min = "0" max "500" placeholder = "table" id = "table" onchange="settings.multTable = this.value; update();"></input>
+<input type = "range" min = "0" max = "500" placeholder = "modulus" id = "modulus" onchange="settings.modulus = this.value; update();"></input>
 
 </html>
