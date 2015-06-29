@@ -1,8 +1,8 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth - 25;
-canvas.height = window.innerHeight - 25;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 var settings = {
   radius: canvas.width/4,
