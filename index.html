@@ -12,7 +12,7 @@
 
 <script>
  
- var canvas = document.getElementById('canvas');
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 canvas.width = 0.9 * window.innerWidth;
@@ -29,6 +29,22 @@ var settings = {
   bgColor: 'white',
   linesColor: 'black'
 };
+
+//Url Parameters : site.com/?t=2&m=130
+var urlParams = window.location.search;
+if(urlParams != ""){
+  var tParam = urlParams.split("t=")[1].split("&")[0];
+  urlParams.replace(tParam, "");
+  if(!isNaN(parseFloat(tParam)) && isFinite(tParam)){
+    settings.multTable = Math.abs(tParam);
+  }
+    if(urlParams.includes("m=")){
+      var mParam = urlParams.split("m=")[1].split("&")[0];
+      if(!isNaN(parseFloat(mParam)) && isFinite(mParam)){
+        settings.modulus = Math.abs(mParam);
+      }
+    }
+  }
 
  function pointPos(nth, r) {
 
@@ -102,7 +118,6 @@ function takeScreenshot(canvas, filename) {
   }
 }
 
- 
 </script>
 
 <button onClick = "takeScreenshot(canvas, 'canvas.png')">Take a screenshot</button>
