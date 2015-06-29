@@ -10,7 +10,10 @@
 
 </body>
 
-<script type = "text/javascript" src = "canvas.js"></script>
+<script src = "canvas.js"></script>
 
+<button onClick="takeScreenshot(canvas, 'canvas.png')">Take a screenshot</button>
+<input type = "range" min = "0" max "500" placeholder = "table" id = "table" onchange="settings.multTable = this.value; update();"></input>
+<input type = "range" min = "0" max = "500" placeholder = "modulus" id = "modulus" onchange="settings.modulus = this.value; update();"></input>
 
 </html>
