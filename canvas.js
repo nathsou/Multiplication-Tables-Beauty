@@ -19,9 +19,10 @@ var settings = {
 function getUrlParam(param){
  var urlParams = window.location.search;
  if(urlParams.substring(0, 1) == "?"){
- return urlParams.split(param + "=")[1].split("&")[0];;
+  if(urlParams.includes(param) && urlParams.includes("&")){return urlParams.split(param + "=")[1].split("&")[0];}
+  else if(urlParams.includes(param)){return urlParams.split(param + "=")[1];}
 }
- return "";
+ return "undefined";
 }
 
 //Url Parameters : site.com/?t=2&m=130
