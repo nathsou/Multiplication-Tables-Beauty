@@ -16,21 +16,17 @@ var settings = {
   linesColor: 'black'
 };
 
+function getUrlParam(param){
+ var urlParams = window.location.search;
+ if(urlParams.substring(0, 1) == "?"){
+ return urlParams.split(param + "=")[1].split("&")[0];;
+}
+ return "";
+}
+
 //Url Parameters : site.com/?t=2&m=130
-var urlParams = window.location.search;
-if(urlParams != ""){
-  var tParam = urlParams.split("t=")[1].split("&")[0];
-  urlParams.replace(tParam, "");
-  if(!isNaN(parseFloat(tParam)) && isFinite(tParam)){
-    settings.multTable = Math.abs(tParam);
-  }
-    if(urlParams.includes("m=")){
-      var mParam = urlParams.split("m=")[1].split("&")[0];
-      if(!isNaN(parseFloat(mParam)) && isFinite(mParam)){
-        settings.modulus = Math.abs(mParam);
-      }
-    }
-  }
+  settings.multTable = (getUrlParam('t') != "")?parseFloat(getUrlParam('t')):settings.multTable;
+  settings.modulus = (getUrlParam('m') != "")?parseFloat(getUrlParam('m')):settings.modulus;
 
  function pointPos(nth, r) {
 
