@@ -8,20 +8,20 @@ Inspired by micmaths's video about multiplication tables's hidden beauty
 
 
 ##Where it comes from
-[![Micmaths is a great math related channel !](http://nathsou.fr/iup/u/a34e-Capture_d’écran_2015-06-29_à_09.22.19.png)](https://www.youtube.com/watch?v=-X49VQgi86E)
+[![Micmaths is a great math related channel !](http://i.imgur.com/A9DC61P.png)](https://www.youtube.com/watch?v=-X49VQgi86E)
 
 
 ##Some interesting parameters
 
-[![Yarn Ball!](http://nathsou.fr/iup/u/2a06-canvas0.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=28&m=324)
+[![Yarn Ball!](http://i.imgur.com/Hf2x6KK.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=28&m=324)
 
-[![Flowers!](http://nathsou.fr/iup/u/fb19-canvas.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=399&m=993)
+[![Flowers!](http://i.imgur.com/8hrNhNQ.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=399&m=993)
 
-[![Parallel lines!](http://nathsou.fr/iup/u/d99a-canvas2.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=41&m=42)
+[![Parallel lines!](http://i.imgur.com/3YTnXhD.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=41&m=42)
 
-[![Rotated squares!](http://nathsou.fr/iup/u/9822-canvas3.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=41&m=32)
+[![Rotated squares!](http://i.imgur.com/7wMUWkn.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=41&m=32)
 
-[![Grid!](http://nathsou.fr/iup/u/ffe3-canvas4.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=89&m=180)
+[![Grid!](http://i.imgur.com/SeP6eXx.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=89&m=180)
 
 And way more to discover !
 
