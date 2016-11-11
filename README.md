@@ -23,6 +23,6 @@ Inspired by micmaths's video about multiplication tables's hidden beauty
 
 [![Grid!](http://i.imgur.com/SeP6eXx.png)](http://nathsou.github.io/Multiplication-Tables-Beauty/?t=89&m=180)
 
-And way more to discover !
+And way more to discover!
 
 
